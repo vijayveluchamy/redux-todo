@@ -1,10 +1,9 @@
 import React,{Component} from 'react';
-
-import store from '../reducers/store';
+import PropTypes from 'prop-types';
 
 let nextTodoId = 0;
 
-const AddTodo = () => {
+const AddTodo = (props, {store}) => {
     let textbox;
     return (
         <div>
@@ -26,3 +25,7 @@ const AddTodo = () => {
 };
 
 export default AddTodo;
+
+AddTodo.contextTypes = {
+    store: PropTypes.object
+}

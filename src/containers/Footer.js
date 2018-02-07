@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+import PropTypes from 'prop-types';
+
 import FilterLink from '../containers/FilterLink';
 
 const Footer = () => {
@@ -28,3 +30,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
+Footer.contextTypes = {
+    store: PropTypes.object
+}
